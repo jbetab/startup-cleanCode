@@ -57,8 +57,8 @@ nav ul li{
     display: grid;
     grid-template-columns: repeat(6, 186px);
     margin-top: 20px;
-    flex-wrap: wrap;
-    gap: 80px;
+    gap: 40px;
+    justify-content: center;
 }
 
 nav ul li a {
@@ -111,13 +111,10 @@ main {
   margin: 10px 0;
 }
 
-.marca{
-   
-}
 .logotipo{
     width: 100px;
     position: absolute;
-    left: 50px;
+    left: 50px; 
 }
 
 .producto button {
@@ -137,7 +134,7 @@ main {
 .seccion-productos {
   display: grid;
   flex-direction: row;
-  align-items: center; /* Centra todo horizontalmente */
+  align-items: center; 
   justify-content: center;
 }
 
@@ -235,5 +232,11 @@ main {
     nav ul{
         flex-direction: column;
         align-items: flex-start;
+    }
+}
+@media (max-width: 1024px) {
+    .productos {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
+    gap: 20px;
     }
 }
